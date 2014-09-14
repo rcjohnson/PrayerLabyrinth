@@ -45,7 +45,7 @@ window.onload = function () {
 function createCanvas() {
 	canvas = document.createElement("canvas")
 	ctx = canvas.getContext("2d");
-	document.body.appendChild(canvas);
+	document.getElementById('container').appendChild(canvas);
 
 	changeDemo(window.location.hash.replace("#", ""));	
 }
@@ -211,8 +211,8 @@ function draw() {
 		queue[list[i]] = undefined;
 		textcontrol = spaceAgeEffect({
 			text: list[i],
-			doColorCycle: true,
-			color: 0 + 100 * i,
+			doColorCycle: false,
+			color: (120 * (i%4)) ,
 			x: Math.floor(Math.random() * 800 + 200), //200-1000
 			y: Math.floor(Math.random() * 500 + 300), //300-800
 			definition: .5,
