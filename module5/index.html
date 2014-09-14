@@ -29,7 +29,7 @@ a:hover { color: #ff0000 }
 var myDataRef = new Firebase('https://brilliant-torch-7792.firebaseio.com/');
 var list = [];
 var queue = {};
-var max_length = 3;
+var max_length = 10;
 
 // caching math functions
 var cos = Math.cos;
@@ -192,7 +192,7 @@ getMetrics = function(text, font) {
 })();
 
 function loadData() {
-	myDataRef.on('child_added', function(snapshot) {
+	myDataRef.startAt().limit(3).on('child_added', function(snapshot) {
 		if (list.length < max_length) {
 			list.push(snapshot.val());
 		} else {
