@@ -21,9 +21,14 @@ a:hover, a:focus {
 
 .jumbotron.jumbo-mod1 {
     margin: 10rem 0 45rem;
-    background-image: none;
-    
+    background-image: none;    
 }
+
+.jumbotron.jumbo-mod2 {
+    margin-bottom:30rem;
+    background-image: none;    
+}
+
 footer {
     text-align: center;
 }
