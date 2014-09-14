@@ -1,0 +1,45 @@
+<div class="jumbotron">
+  <div class="container">
+    <video id="video" width="100%" src="http://prayerlabyrinth.com/labyrinth/module2/video.mp4" preload="preload" autoplay="autoplay" ></video>
+	<p><a id="nextbutton" class="btn btn-primary btn-lg" style="display:none;" role="button" onclick="next()">Enter the Labyrinth &raquo;</a></p>
+  </div>
+</div>
+<script type="text/javascript">
+  var next = 0;
+  $(document).ready(function() {
+    setTimeout(function() {displayNextButton();}, 5000);
+  	next = setTimeout(function() {next();}, 3.5 * 60 * 1000); // 2.5 minutes until you auto move forward.
+	  volumeDown(100); // So we can fade in music at the end.
+
+	setTimeout(function() {$('#backgroundaudio').trigger('play');}, 2.8 * 60 * 1000);
+	setTimeout(function() {volumeUp(20);}, 2.85 * 60 * 1000);
+	setTimeout(function() {volumeUp(20);}, 2.9 * 60 * 1000);
+	setTimeout(function() {volumeUp(20);}, 2.95 * 60 * 1000);
+	setTimeout(function() {volumeUp(20);}, 3 * 60 * 1000);
+	setTimeout(function() {volumeUp(20);}, 3.1 * 60 * 1000);
+  });
+
+  function displayNextButton() {
+  	$('#nextbutton').fadeIn(30*1000); // Slow fade in.
+  }
+
+  function volumeDown(percent) {
+  	vol = $('#backgroundaudio').prop('volume') - percent/100;
+  	vol = Math.max(vol, 0);
+  	$('#backgroundaudio').prop('volume', vol);
+  }
+
+  function volumeUp(percent) {
+  	vol = $('#backgroundaudio').prop('volume') + percent/100;
+  	vol = Math.min(vol,100);
+  	$('#backgroundaudio').prop('volume', vol);
+  }
+
+  function next() {
+    $('#backgroundaudio').trigger('play');
+  	$("html, body").animate({scrollTop: 0},"slow");
+    volumeUp(100);
+    clearTimeout(next);
+    $('#container').load('/labyrinth/module3/');
+  }
+</script>
