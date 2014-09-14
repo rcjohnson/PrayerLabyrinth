@@ -50,6 +50,11 @@ margin-top: 4rem;
 margin-top: 4rem;
 }
 
+p.tiny-helpers {
+font-size: 10px;
+font-style: oblique;
+padding-top: 1rem;
+}
 
 
 /* ------- Begin Module 3 ------- */
