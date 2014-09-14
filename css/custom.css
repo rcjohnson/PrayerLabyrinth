@@ -3,6 +3,11 @@ body {
 	color: #f09e7e;
 }
 
+canvas {
+margin-left: -75px;
+margin-top: 18px;
+}
+
 a {
 	color: #130d0a;
 	text-decoration: none;
@@ -65,6 +70,11 @@ p.tiny-helpers {
 font-size: 10px;
 font-style: oblique;
 padding-top: 1rem;
+}
+
+a.btn.btn-primary.btn-lg.btn-deeper {
+position: absolute;
+right: 0;
 }
 
 
