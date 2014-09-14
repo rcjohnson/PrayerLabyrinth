@@ -19,6 +19,10 @@ a:hover, a:focus {
     background-position: center;
 }
 
+.jumbotron.jumbo-main {
+    margin-bottom: 0;
+}
+
 .jumbotron.jumbo-mod1 {
     margin: 10rem 0 45rem;
     background-image: none;    
