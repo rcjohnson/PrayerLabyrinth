@@ -1,0 +1,46 @@
+body {
+	background: #130d0a;
+	color: #f09e7e;
+}
+
+a {
+	color: #130d0a;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover, a:focus {
+	color: #fff;
+}
+
+.jumbotron {
+    background: rgba(19,13,10,.2);
+    background-image: url(../img/mod1-bg.jpg);
+    background-position: center;
+}
+
+.jumbotron.jumbo-mod1 {
+    margin: 10rem 0 45rem;
+    background-image: none;
+    
+}
+footer {
+    text-align: center;
+}
+
+.container-fluid.nav-contaianer {
+    background: #130d0a;
+}
+.jumbotron p {
+margin-bottom: 5px;
+font-size: 15px;
+font-weight: 200;
+}
+
+.btn-lg, .btn-group-lg>.btn {
+margin-top: 4rem;
+}
+
+.navbar-form {
+margin-top: 4rem;
+}
