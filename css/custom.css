@@ -17,6 +17,9 @@ a:hover, a:focus {
     background: rgba(19,13,10,.2);
     background-image: url(http://prayerlabyrinth.com/labyrinth/img/mod1-bg.jpg);
     background-position: center;
+}
+
+.jumbotron.jumbo-main {
     margin-bottom: 0;
 }
 
@@ -30,9 +33,15 @@ a:hover, a:focus {
     background-image: none;    
 }
 
+.jumbotron.jumbo-mod4 {
+    margin-bottom:19rem;
+    background-image: none;
+    background: rgba(19,13,10,.2);
+}
+
 footer {
     text-align: center;
-    display: none;
+    display: none!important;
 }
 
 .container-fluid.nav-contaianer {
