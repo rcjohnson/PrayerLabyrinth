@@ -34,5 +34,5 @@ function hideImg(num, cb) {
 	return $("#img"+num).fadeOut(1000, cb);
 }
 function scrollToForm() {
-	$('html, body').animate({scrollTop: $("#theForm").offset().top}, 10 * 1000);
+	$('html, body').animate({scrollTop: $("#img1").offset().top}+50, 10 * 1000);
 }
