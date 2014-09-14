@@ -42,6 +42,9 @@
     if (window.next) {
       clearTimeout(next);
     }
+
+    history.pushState({},'Start');
+    mixpanel.track("Starting Module3",{});
     $('#container').load('/labyrinth/module3/');
   }
 </script>

@@ -10,7 +10,15 @@
 	  <button type="submit" class="btn btn-success">Personalize your experience</button>
 	  <p>Try out "5watts" if you don't have an instagram account.</p>
 	</form>
-    <p><a class="btn btn-primary btn-lg" role="button" onclick="$('#container').load('/labyrinth/module2/'); history.pushState({},'Start');">Enter the Labyrinth &raquo;</a></p>
+    <p><a class="btn btn-primary btn-lg" role="button" onclick="next();">Enter the Labyrinth &raquo;</a></p>
       <p class="tiny-helpers">The Prayer Labyrinth is best experienced in modern browsers and in full screen mode (F11). </p>
   </div>
 </div>
+
+<script type="text/javascript">
+function next() {
+  history.pushState({},'Start');
+  mixpanel.track("Starting Module2",{});
+  $('#container').load('/labyrinth/module2/'); 
+}
+</script>

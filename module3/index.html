@@ -42,7 +42,7 @@
 				</form>
 				</div>
                 <div class="row">
-                  <div class="col-md-6 col-md-offset-3"><a class="btn btn-primary btn-lg" role="button" onclick="$('#container').load('/labyrinth/module5/');">Next experience &raquo;</a></div>
+                  <div class="col-md-6 col-md-offset-3"><a class="btn btn-primary btn-lg" role="button" onclick="next();">Next experience &raquo;</a></div>
                 </div>
 			</header>
 		</div><!-- /container -->
@@ -61,5 +61,11 @@
 					$("#q1").val("").prop("placeholder", "Awesome, anything else?");
 				}
 				return false;
+			}
+
+			function next() {
+				history.pushState({},'Start');
+    			mixpanel.track("Starting Module5",{});
+    			$('#container').load('/labyrinth/module5/');
 			}
 		</script>

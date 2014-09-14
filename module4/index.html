@@ -6,7 +6,7 @@
 <div class="jumbotron jumbo-mod4">
   <div class="container">
     <video id="video" width="100%" src="http://prayerlabyrinth.com/labyrinth/module4/flyover.mp4" preload="preload" autoplay="autoplay" ></video>
-	<p><a id="nextbutton" class="btn btn-primary btn-lg" style="display:none;" role="button" onclick="$('#container').load('/labyrinth/module6/');">Conclude your experience &raquo;</a></p>
+	<p><a id="nextbutton" class="btn btn-primary btn-lg" style="display:none;" role="button" onclick="next();">Conclude your experience &raquo;</a></p>
   </div>
 </div>
 
@@ -20,5 +20,11 @@
 
   function displayNextButton() {
   	$('#nextbutton').show();
+  }
+
+  function next() {
+    history.pushState({},'Start');
+    mixpanel.track("Starting Module6",{}); 
+    $('#container').load('/labyrinth/module6/');
   }
 </script>
